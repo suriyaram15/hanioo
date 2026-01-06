@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hanioo Design System - All colors in HSL */
+
+@layer base {
+  :root {
+    /* Hanioo Brand Colors */
+    --primary-blue: 226 50% 35%;
+    --secondary-blue: 211 100% 50%;
+    --green: 142 71% 45%;
+    --text-dark: 213 21% 18%;
+    --grey-1: 215 14% 58%;
+    --cream: 36 30% 96%;
+    --light-grey: 240 5% 96%;
+    --border-light: 30 17% 95%;
+    --star-orange: 38 94% 51%;
+    
+    /* Semantic tokens */
+    --background: 0 0% 100%;
+    --foreground: 213 21% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 213 21% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 21% 18%;
+    --primary: 226 50% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 211 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 215 14% 58%;
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 17% 95%;
+    --input: 30 17% 95%;
+    --ring: 226 50% 35%;
+    --radius: 0.75rem;
+    
+    /* Sidebar tokens */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 213 21% 18%;
+    --sidebar-primary: 226 50% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 213 21% 18%;
+    --sidebar-border: 30 17% 95%;
+    --sidebar-ring: 226 50% 35%;
+  }
+
+  .dark {
+    --background: 213 21% 10%;
+    --foreground: 0 0% 100%;
+    --card: 213 21% 14%;
+    --card-foreground: 0 0% 100%;
+    --popover: 213 21% 14%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 226 50% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 211 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 213 21% 18%;
+    --muted-foreground: 215 14% 68%;
+    --accent: 142 71% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 213 21% 20%;
+    --input: 213 21% 20%;
+    --ring: 226 50% 50%;
+    --sidebar-background: 213 21% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 226 50% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 213 21% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 213 21% 20%;
+    --sidebar-ring: 226 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Hero gradient background */
+  .bg-hero-gradient {
+    background: linear-gradient(180deg, hsl(36, 30%, 96%) 0%, hsl(0, 0%, 100%) 100%);
+  }
+  
+  /* Dark gradient for banners */
+  .bg-dark-gradient {
+    background: linear-gradient(315deg, hsl(245, 62%, 18%) 0%, hsl(231, 54%, 37%) 100%);
+  }
+  
+  /* Blue gradient for cards */
+  .bg-blue-gradient {
+    background: linear-gradient(97.68deg, hsl(211, 90%, 65%) 0%, hsl(211, 100%, 50%) 100%);
+  }
+  
+  /* Feature icon gradient */
+  .bg-icon-gradient {
+    background: linear-gradient(315deg, hsl(245, 62%, 18%) 0%, hsl(231, 54%, 37%) 100%);
+  }
+  
+  /* Light blue overlay */
+  .bg-blue-overlay {
+    background: linear-gradient(97.68deg, hsla(211, 90%, 65%, 0.12) 0%, hsla(211, 100%, 50%, 0.12) 100%);
+  }
+}
